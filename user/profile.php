@@ -418,7 +418,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             
             <!-- User Menu -->
-            <div class="flex items-center">
+          <div class="flex items-center">
                 <div class="relative" id="userDropdown">
                     <button id="userDropdownButton" class="flex items-center">
                         <div class="relative h-9 w-9 rounded-full overflow-hidden border-2 border-gray-200">
@@ -428,13 +428,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <img src="../assets/img/avatar-placeholder.png" class="h-full w-full object-cover" alt="Avatar">
                             <?php endif; ?>
                         </div>
-                        <span class="hidden md:block text-gray-700 font-medium ml-2">Ryan</span>
+                        <span class="hidden md:block text-gray-700 font-medium ml-2"><?php echo htmlspecialchars($user_data['name']); ?></span>
                         <i class="fas fa-chevron-down ml-2 text-gray-500 text-xs"></i>
                     </button>
                     <div id="userDropdownMenu" class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 hidden animate-fade-in z-50">
                         <div class="p-3 border-b border-gray-100">
-                            <p class="text-sm font-medium text-gray-700">Ryan</p>
-                            <p class="text-xs text-gray-500"><?php echo $user_data['email'] ?? 'ryanalhmda@gmail.com'; ?></p>
+                            <p class="text-sm font-medium text-gray-700"><?php echo htmlspecialchars($user_data['name']); ?></p>
+                            <p class="text-xs text-gray-500"><?php echo htmlspecialchars($user_data['email']); ?></p>
                         </div>
                         <a href="profile.php" class="flex items-center px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-indigo-600 transition">
                             <i class="fas fa-user-circle text-gray-400 w-5 mr-2"></i>Profil Saya
