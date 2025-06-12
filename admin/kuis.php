@@ -579,7 +579,6 @@ $admin_data = $stmt_admin->get_result()->fetch_assoc();
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                             <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pertanyaan</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kategori</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tingkat</th>
@@ -589,8 +588,7 @@ $admin_data = $stmt_admin->get_result()->fetch_assoc();
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
                             <?php while($row = $result->fetch_assoc()): ?>
-                                <tr class="hover:bg-gray-50 transition">
-                                    <td class="px-6 py-4 whitespace-nowrap"><?php echo $row['id']; ?></td>
+                                <tr class="hover:bg-gray-50 transition">    
                                     <td class="px-6 py-4">
                                         <div class="text-sm font-medium text-gray-900"><?php echo substr($row['pertanyaan'], 0, 100) . (strlen($row['pertanyaan']) > 100 ? '...' : ''); ?></div>
                                     </td>
